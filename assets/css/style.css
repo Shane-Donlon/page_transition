@@ -1,0 +1,110 @@
+/* ---------------------- */
+/* Comment Content        */
+/* ---------------------- */
+
+:root {
+  --fs-400: 1rem;
+  --fw-regualar: 400;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: black;
+}
+
+/* reminders */
+.container {
+  width: min(calc(100% - 3rem), 1500px);
+  margin-inline: auto;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.125rem;
+  position: relative;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+
+  height: 5px;
+  background-color: royalblue;
+  border-radius: 100vmax;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 400ms ease;
+}
+
+nav a:hover::before {
+  transition: transform 400ms ease;
+  transform: scaleX(1);
+}
+
+.cta-wrapper {
+  position: relative;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+.transition {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  pointer-events: none;
+}
+
+.transition li {
+  list-style-type: none;
+  transform: scaleY(0);
+  overflow: hidden;
+  transform-origin: bottom center;
+  background-color: whitesmoke;
+  display: grid;
+  align-items: center;
+}
+
+.content {
+  background-color: white;
+  margin-block: 1.5em;
+  font-size: 1rem;
+}
+
+a {
+  color: blueviolet;
+  font-weight: 600;
+}
+
+@media (min-width: 650px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
