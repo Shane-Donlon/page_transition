@@ -71,6 +71,7 @@ h1 {
   z-index: 2;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  padding-inline: 0.5em;
   pointer-events: none;
 }
 
@@ -79,7 +80,7 @@ h1 {
   transform: scaleY(0);
   overflow: hidden;
   transform-origin: bottom center;
-  background-color: whitesmoke;
+  background-color: white;
   display: grid;
   align-items: center;
 }
